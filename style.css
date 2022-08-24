@@ -1,3 +1,8 @@
+body {
+    background: white;
+    color: black;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -10,14 +15,56 @@ table {
     padding: .25em;
 }
 
+td.nocell {
+    border: none;
+}
+
+.rowtitle {
+    white-space: nowrap;
+    width: 1.5em;
+}
+.rowtitle div {
+    transform: rotate(-90deg);
+    margin-left: -10em;
+    margin-right: -10em;
+}
+
+.matrix td div + div {
+    margin-top: .25em;
+}
+
+th {
+    background: #eee;
+}
+
 td.empty {
-    opacity: 0.125;
+    opacity: .125;
+}
+
+.footnotes {
+    list-style: none;
+    margin: .5em 0 0 0;
+    padding: 0;
+}
+.footnotes li {
+    margin: 0;
+    padding: 0;
+}
+.footnotes li::before {
+    content: attr(value);
+    padding-right: .25em;
+    vertical-align: super;
+    font-size: 80%;
 }
 
 a, a:active {
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline dotted 1px;
+}
+
+sup a, sup a:active, sup a:hover {
+    color: black;
+    text-decoration: none;
 }

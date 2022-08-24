@@ -6,26 +6,122 @@
 </head><body>
 
 <h2>Graphics API Wrapper Matrix</h2>
-<table class="matrix"><tr><td></td>
+<table id="wrappers" class="matrix"><tr><td class="nocell" rowspan="2" colspan="2"></td>
+<th class="coltitle" colspan="7">Source API</th>
+</tr><tr>
+<th>Direct3D 7/8</th>
 <th>Direct3D 9</th>
 <th>Direct3D 11</th>
+<th>Direct3D 12</th>
+<th>Desktop OpenGL</th>
+<th>OpenGL ES 2.x/3.x</th>
+<th>Vulkan</th>
 </tr>
-<tr><th>Direct3D 11</th>
-<td><a href="https://github.com/Joshua-Ashton/dxup" target="_blank">DXUP</a>
+<tr>
+<th class="rowtitle" rowspan="7"><div>Target API</div></th>
+<th>Direct3D 9</th>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
 </td>
 <td class="empty">&mdash;</td>
 </tr>
-<tr><th>Direct3D 12</th>
-<td><a href="https://github.com/microsoft/D3D9On12" target="_blank">D3D9on12</a>
+<tr>
+<th>Direct3D 11</th>
+<td><div><a href="http://dege.freeweb.hu/dgVoodoo2/" target="_blank">dgVoodoo 2</a></div>
+</td>
+<td><div><a href="https://github.com/Joshua-Ashton/dxup" target="_blank">DXUP</a></div>
+<div><a href="http://dege.freeweb.hu/dgVoodoo2/" target="_blank">dgVoodoo 2</a></div>
+</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
 </td>
 <td class="empty">&mdash;</td>
 </tr>
-<tr><th>Vulkan</th>
-<td><a href="https://github.com/doitsujin/dxvk" target="_blank">DXVK</a>
+<tr>
+<th>Direct3D 12</th>
+<td><div><a href="http://dege.freeweb.hu/dgVoodoo2/" target="_blank">dgVoodoo 2</a></div>
 </td>
-<td><a href="https://github.com/doitsujin/dxvk" target="_blank">DXVK</a>
+<td><div><a href="https://github.com/microsoft/D3D9On12" target="_blank">D3D9On12</a></div>
+<div><a href="http://dege.freeweb.hu/dgVoodoo2/" target="_blank">dgVoodoo 2</a></div>
+</td>
+<td><div><a href="https://github.com/microsoft/D3D11On12" target="_blank">D3D11On12</a></div>
+</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://docs.mesa3d.org/drivers/d3d12.html" target="_blank">OpenGLOn12</a><sup><a href="#wrappers-note-1">1</a></sup></div>
+</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://gitlab.freedesktop.org/mesa/mesa/-/tree/main/src/microsoft/vulkan" target="_blank">Dozen</a><sup><a href="#wrappers-note-1">1</a></sup></div>
+</td>
+</tr>
+<tr>
+<th>Desktop OpenGL</th>
+<td><div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td><div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td><div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
+</td>
+<td class="empty">&mdash;</td>
+</tr>
+<tr>
+<th>OpenGL ES 2.x/3.x</th>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="http://ptitseb.github.io/gl4es/" target="_blank">GL4ES</a></div>
+</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
+</td>
+<td class="empty">&mdash;</td>
+</tr>
+<tr>
+<th>Vulkan</th>
+<td><div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td><div><a href="https://github.com/doitsujin/dxvk" target="_blank">DXVK</a></div>
+<div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td><div><a href="https://github.com/doitsujin/dxvk" target="_blank">DXVK</a></div>
+<div><a href="https://www.winehq.org" target="_blank">WineD3D</a></div>
+</td>
+<td><div><a href="https://wiki.winehq.org/Vkd3d" target="_blank">VKD3D</a></div>
+<div><a href="https://github.com/HansKristian-Work/vkd3d-proton" target="_blank">VKD3D-Proton</a></div>
+</td>
+<td><div><a href="https://docs.mesa3d.org/drivers/zink.html" target="_blank">Zink</a></div>
+</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
+</td>
+<td class="empty">&mdash;</td>
+</tr>
+<tr>
+<th>Metal</th>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td class="empty">&mdash;</td>
+<td><div><a href="https://chromium.googlesource.com/angle/angle/+/main/README.md" target="_blank">ANGLE</a></div>
+</td>
+<td><div><a href="https://github.com/KhronosGroup/MoltenVK" target="_blank">MoltenVK</a></div>
 </td>
 </tr>
 </table>
+<ol id="{self.obj_id}-notes" class="footnotes">
+<li id="wrappers-note-1" value="1">implemented as part of the <a href="https://www.mesa3d.org" target="_blank">Mesa</a> project</li>
+</ol>
+
+<p>Only active projects that have seen updates in the previous years and target
+non-obsolete APIs have been included here.</p>
 
 </body></html>
